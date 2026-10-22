@@ -2,7 +2,7 @@
 
 CBS노컷뉴스 박종환 기자용 보고 준비 페이지.
 원본 [tolibre/news-monitor](https://github.com/tolibre/news-monitor)(김광일 기자 출입처판)에서 설정만 바꿔 만든 판이다.
-같은 방식(사회정책팀): 노동판 [newsradar-labor](https://github.com/tolibre/newsradar-labor) · 재경부판 [newsradar-moef](https://github.com/tolibre/newsradar-moef) · 국회판 [newsradar-assembly](https://github.com/tolibre/newsradar-assembly) · 산업부판 [newsradar-industry](https://github.com/tolibre/newsradar-industry) · 기후·문체판 [newsradar-climate-culture](https://github.com/tolibre/newsradar-climate-culture) · 복지·보건판 [newsradar-welfare](https://github.com/tolibre/newsradar-welfare).
+같은 방식(사회정책팀): 노동판 [newsradar-labor](https://github.com/tolibre/newsradar-labor) · 재경부판 [newsradar-moef](https://github.com/tolibre/newsradar-moef) · 국회판 [newsradar-assembly](https://github.com/tolibre/newsradar-assembly) · 산업부판 [newsradar-industry](https://github.com/tolibre/newsradar-industry) · 기후·문체판 [newsradar-climate-culture](https://github.com/tolibre/newsradar-climate-culture) · 복지·보건판 [newsradar-welfare](https://github.com/tolibre/newsradar-welfare) · 행정판 [newsradar-gov](https://github.com/tolibre/newsradar-gov).
 
 - 페이지: https://tolibre.github.io/newsradar-education/ (→ `/live/`)
 - 섹션: 교육부 · 교육청 (+ 맨 끝 박종환 기자 본인 기사, 보고 양식에서 `<기처리>`)
@@ -26,7 +26,7 @@ python tools/make_variant.py /tmp/nm .
 | 오탐 예방 | — | '교육부터'("교육부터 창업까지")·'고등교육부'(외국 부처)·'교육부문'·'교육부서' — 사회정책팀 공용 `tools/social_team.py` |
 | DB 보관 | 90일 | 45일(첫 실행 실측 뒤 조정) |
 | 기관장 이름 씨앗 | — | 최교진(장관) |
-| 당직(휴일 특근) | 경제정책팀 8곳 | **사회정책팀 묶음**(양형욱·정다운·박종환 출입처 합침, `tools/social_team.py`) 중 이 판 섹션이 아닌 것 — '휴일 특근' 스위치로 봄(0-67) |
+| 당직(휴일 특근) | 경제정책팀 8곳 | **사회정책팀 묶음**(사회정책팀 다섯 명 — 양형욱·정다운·김동빈·박종환·김민재 — 출입처 합침, `tools/social_team.py`) 중 이 판 섹션이 아닌 것 — '휴일 특근' 스위치로 봄(0-67) |
 | 본인 기사 섹션 | 김광일 기자 | 박종환 기자 |
 | 브라우저 저장키 | `nm-live-*` | `nm-edu-*` |
 | 기기 연동·텔레그램·digest 페이지·수확 | 있음 | 없음(다른 변형판과 같음) |
