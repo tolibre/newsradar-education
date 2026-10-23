@@ -28,11 +28,13 @@ NEW_BASE_KEYWORDS = '''BASE_KEYWORDS = [
     # 뉴스레이다 교육부판(tools/make_variant.py가 생성 — 직접 고치지 말 것). 사용자 10/22 "키워드는 교육부, 교육청".
     # '교육청'은 시도교육청 전부(경기도교육청이 DB 제목 최다)를 한 섹션으로 받는다.
     "교육부",
+    # 0-76: '교육장관'은 제목 판정 전용(social_team.py NO_SEARCH — 네이버 검색 안 함).
+    "교육장관",
     "교육청",
 ]
 '''
 NEW_GROUPS_LINE = ("KEYWORD_GROUPS.update(DUTY_KEYWORD_GROUPS)\n"
-                   "KEYWORD_GROUPS.update({'교육부': '교육부', '교육청': '교육청'})   # 교육판(생성기)\n")
+                   "KEYWORD_GROUPS.update({'교육부': '교육부', '교육장관': '교육부', '교육청': '교육청'})   # 교육판(생성기)\n")
 
 # 교육청 섹션 '다른 지역' 접기(원본 0-69 자리) — 사용자 10/22 "박종환 기자는 서울 경기 위주로 볼 거야. 다른 지역도 보긴 볼 테니 '접기' 기능을 이용해보자."
 # 접는 것: ①제목에 다른 시도 이름이 있고 서울·경기가 없는 묶음 ②'교육·학교·학생' 같은 말이 제목에 전혀 없는 묶음(본문에만 '교육청'이 스친 기사).
@@ -117,7 +119,7 @@ EXPECT = {
     "LIVE_FOLD_KEEP": ST.fold_keep(GROUPS, FOLD_KEEP),
     "LIVE_WEAK_FOLD_GROUPS": list(ST.WEAK_GROUPS),   # 0-68
     "EXCLUDE_TERMS": [],      # 0-46 — 공정위 오탐용 제외어 꺼짐
-    "KEYWORDS": ["교육부", "교육청"],
+    "KEYWORDS": ["교육부", "교육장관", "교육청"],
     "GROUP_ORDER": GROUPS,
     "RETENTION_DAYS": 45,
     "BYLINE_NAME": REPORTER,
