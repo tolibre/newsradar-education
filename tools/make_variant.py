@@ -57,6 +57,8 @@ NM = "news_monitor.py"
 RP = "render_page.py"
 
 REPLACEMENTS = [
+    # 0-92(2026-11-06): 원본의 지역 기사 접기를 끈다 — 교육판은 시의회 학생인권조례·교육청 예산 등 지방의회 기사가 본 기사다(사용자 11/6 13:17 동의).
+    (NM, "LIVE_REGION_FOLD = True\n", "LIVE_REGION_FOLD = False   # 0-92: 교육판은 시의회 학생인권조례·교육청 예산 등 지방의회 기사가 본 기사다(생성기)\n", 1, False),
     # ---- news_monitor.py: 출입처 ----
     # 0-44·0-67: 휴일 특근 — 원본은 경제정책팀 8곳을 당직으로 모은다. 사회정책팀 판은 그 묶음을 팀 묶음(social_team.py)으로
     # 바꾸고 DUTY_COLLECT는 원본 값(True) 그대로 둔다(사용자 10/22 "세 명을 그룹화해서 휴일 당직 기능을 만들자").
